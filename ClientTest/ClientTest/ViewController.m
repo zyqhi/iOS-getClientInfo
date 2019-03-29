@@ -60,6 +60,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self _pushVCWithType:indexPath.row title:_infosDict[@(indexPath.row)]];
 }
 
