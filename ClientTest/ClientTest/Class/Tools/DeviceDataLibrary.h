@@ -1,5 +1,5 @@
 //
-//  DeviceDataLibrery.h
+//  DeviceDataLibrary.h
 //  ClientTest
 //
 //  Created by Leon on 2017/8/24.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DeviceDataLibrery : NSObject
+@interface DeviceDataLibrary : NSObject
 
 + (instancetype)sharedLibrery;
 /** 获取设备名称 */

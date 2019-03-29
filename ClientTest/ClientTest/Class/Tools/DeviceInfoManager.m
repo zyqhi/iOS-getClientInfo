@@ -30,7 +30,7 @@
 //#include <arpa/inet.h>
 //#include <ifaddrs.h>
 
-#import "DeviceDataLibrery.h"
+#import "DeviceDataLibrary.h"
 
 @implementation DeviceInfoManager
 
@@ -95,15 +95,15 @@
 
 // 获取设备型号
 - (const NSString *)getDeviceName {
-    return [[DeviceDataLibrery sharedLibrery] getDiviceName];
+    return [[DeviceDataLibrary sharedLibrery] getDiviceName];
 }
 
 - (const NSString *)getInitialFirmware {
-    return [[DeviceDataLibrery sharedLibrery] getInitialVersion];
+    return [[DeviceDataLibrary sharedLibrery] getInitialVersion];
 }
 
 - (const NSString *)getLatestFirmware {
-    return [[DeviceDataLibrery sharedLibrery] getLatestVersion];
+    return [[DeviceDataLibrary sharedLibrery] getLatestVersion];
 }
 
 // 私有API，上线会被拒
@@ -157,7 +157,7 @@
 }
 
 - (NSString *)getCPUProcessor {
-    return [[DeviceDataLibrery sharedLibrery] getCPUProcessor] ? : @"unKnown";
+    return [[DeviceDataLibrary sharedLibrery] getCPUProcessor] ? : @"unKnown";
 }
 
 #pragma mark - CPU

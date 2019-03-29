@@ -1,12 +1,12 @@
 //
-//  DeviceDataLibrery.m
+//  DeviceDataLibrary.m
 //  ClientTest
 //
 //  Created by Leon on 2017/8/24.
 //  Copyright © 2017年 王鹏飞. All rights reserved.
 //
 
-#import "DeviceDataLibrery.h"
+#import "DeviceDataLibrary.h"
 
 #import "sys/utsname.h"
 
@@ -100,21 +100,21 @@ typedef NS_ENUM(NSUInteger, DiviceType) {
     iUnknown,
 };
 
-@interface DeviceDataLibrery()
+@interface DeviceDataLibrary()
 
 @property (nonatomic, assign) DiviceType iDevice;
 
 @end
 
-@implementation DeviceDataLibrery
+@implementation DeviceDataLibrary
 
 #pragma mark - Public Method
 
 +(instancetype)sharedLibrery {
-    static DeviceDataLibrery *_librery;
+    static DeviceDataLibrary *_librery;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _librery = [[DeviceDataLibrery alloc] init];
+        _librery = [[DeviceDataLibrary alloc] init];
         _librery.iDevice = [self transformMachineToIdevice];
     });
     return _librery;
