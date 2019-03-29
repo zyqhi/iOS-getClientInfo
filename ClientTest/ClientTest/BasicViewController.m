@@ -56,7 +56,8 @@
     self.myTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
-    self.myTableView.rowHeight = 80;
+    self.myTableView.rowHeight = 50;
+    self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.view addSubview:self.myTableView];
     
@@ -277,7 +278,7 @@
     // 获取数据字典
     BasicInfo *infoModel = self.infoArray[indexPath.row];
     cell.textLabel.text = infoModel.infoKey;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"------>%@", infoModel.infoValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", infoModel.infoValue];
     cell.detailTextLabel.numberOfLines = 0;
     return cell;
 }
